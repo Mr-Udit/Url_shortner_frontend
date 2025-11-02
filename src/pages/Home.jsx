@@ -12,7 +12,7 @@ const Home = () => {
         }
         // Here you would typically send the URL to your backend for shortening
         console.log('Shortening URL:', url)
-        fetch('http://localhost:3000/api/url', {
+        fetch('https://url-shortner-backend-1733.onrender.com/api/url', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ const Home = () => {
             body: JSON.stringify({ "url" : url }),
         }).then(response => response.json()).then(data => {
             console.log('Shortened URL:', data.shortId)
-            setShortenedUrl(`http://localhost:3000/${data.shortId}`)
+            setShortenedUrl(`https://url-shortner-backend-1733.onrender.com/${data.shortId}`)
         }).catch(error => {
             console.error('Error shortening URL:', error)
         })

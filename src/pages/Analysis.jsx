@@ -15,7 +15,7 @@ const Analysis = () => {
 
     const shortId = url.substring(url.length - 8,url.length);
 
-    const baseurl = "http://localhost:3000/api/analytics";
+    const baseurl = "https://url-shortner-backend-1733.onrender.com/api/analytics";
     const queryString = new URLSearchParams({ shortId }).toString();
     const queryurl = `${baseurl}?${queryString}`;
 
